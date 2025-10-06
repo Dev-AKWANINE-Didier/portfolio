@@ -62,7 +62,7 @@ box-shadow: 0px 0px 10px  #4712a8;
   border: 1px solid rgba(255, 255, 255, 0.064);
 }
 #about article section.section-left article:hover{
-  box-shadow: 0px 0px 35px  #4712a8;
+  box-shadow: 0px 0px 10px  #4712a8;
 
 }
 
@@ -77,6 +77,39 @@ box-shadow: 0px 0px 10px  #4712a8;
 .section-3 .main-section:hover{
   opacity: 0.8;
   transform: translateY(-5px) scale(1.05);
+}
+
+.section-4 .project article section{
+  border: 1px solid rgba(255, 255, 255, 0.064);
+  transition: transform 0.3s ease;
+}
+.section-4 .project article section:hover{
+  transform: translateY(-2px) scale(1.02);
+}
+.section-5 section article section{
+  border: 1px solid rgba(255, 255, 255, 0.064);
+  transition: transform 0.3s ease,box-shodow 0.3s ease;
+}
+
+.section-5 section article section:hover{
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0px 0px 10px  #4712a8;
+  }
+.section-5 section article section  a{
+    transition: background 0.3s ease;
+  }
+
+.location {
+  border: 1px solid rgba(255, 255, 255, 0.064);
+}
+
+footer section article p {
+  color: #ffffff1a;
+  font-size: 1rem;
+  font-family: "Italianno", cursive;
+}
+footer section:nth-child(1){
+  border-bottom: 1px solid rgba(255, 255, 255, 0.064);
 }
 
 /* sm (≥640px) */
@@ -109,7 +142,9 @@ box-shadow: 0px 0px 10px  #4712a8;
   .section-2 header h2{
     font-size: 1.5rem;
   }
-
+  .section-3 {
+    background-color: #040814;
+  }
   .section-3 header h1{
     font-size: 2.5rem;
   }
@@ -125,6 +160,17 @@ box-shadow: 0px 0px 10px  #4712a8;
   .section-4 header h2{
     font-size: 1.5rem;
   }
+
+
+  .section-5 header h1{
+    font-size: 2.5rem;
+  }
+
+  .section-5 header h2{
+    font-size: 1.5rem;
+  }
+  
+
   /* .section-2 .section-left{
     width: 48%;
     background: red;
