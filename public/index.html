@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Italianno,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
-<body class="bg-[#030711] ">
+<body class=" ">
     <nav id="navbar" class="fixed min-h-[4rem] px-[1rem]  items-center border-gray-500  text-white flex justify-between top-0 w-full z-50 border-b border-border backdrop-blur-xl ">
         <section>
             <div id="logo">
@@ -38,7 +38,7 @@
             </div>
         </section>
         <section class="">
-            <ul class="links z-10   items-center left-0 top-[4rem] px-[1rem] h-[15rem]  absolute w-[100%]  gap-4  ">
+            <ul id="navbarlinks" class="links z-10   items-center left-0 top-[4rem] px-[1rem] h-[15rem]  absolute w-[100%]  gap-4  ">
                 <li><a href="#home" class="hover:bg-[#4c11bb] px-4 py-1 rounded-[5px]">Acceuil</a></li>
                 <li><a href="#about" class="hover:bg-[#4c11bb] px-4 py-1 rounded-[5px]">A propos</a></li>
                 <li><a href="#skills" class="hover:bg-[#4c11bb] px-4 py-1 rounded-[5px]">Compétences</a></li>
@@ -47,20 +47,20 @@
             </ul>
         </section>
         <section class="flex gap-5 items-center">
-            <div class="mode hover:bg-[#4c11bb] cursor-pointer rounded-full w-[2.5rem] h-[2.5rem] flex justify-center items-center">
-                <i class="bi bi-brightness-high hidden "></i>
-                <i class="bi bi-moon"></i>
+            <div id="theme-toggle" class="mode hover:bg-[#4c11bb] cursor-pointer rounded-full w-[2.5rem] h-[2.5rem] flex justify-center items-center">
+                <i class="bi bi-brightness-high theme-icon-hidden"></i>
+                <i class="bi bi-moon "></i>
             </div>
-            <div class="translate hover:bg-[#4c11bb] cursor-pointer rounded-full w-[2.5rem] h-[2.5rem] flex justify-center items-center">
+            <div id="translate" class="translate hover:bg-[#4c11bb] cursor-pointer rounded-full w-[2.5rem] h-[2.5rem] flex justify-center items-center">
                   <i class="bi bi-translate"></i>
             </div>
-            <div class="toggle-btn flex z-50  hover:bg-[#4c11bb] cursor-pointer rounded-xl w-[2.5rem] h-[2.5rem] justify-center items-center">
+            <div id="toggle-btn" class="toggle-btn flex z-50  hover:bg-[#4c11bb] cursor-pointer rounded-xl w-[2.5rem] h-[2.5rem] justify-center items-center">
                 <i class="bi bi-list"></i>
-                <i class="bi bi-x-lg hidden "></i>
+                <i class="bi bi-x-lg toggle-btn-icon "></i>
             </div>
         </section>
     </nav>
-    <section class="translate-section fixed right-[2rem] top-[4rem] rounded-xl w-[7rem] h-[5rem] flex items-center justify-center flex-col">
+    <section id="translate-section" class="translate-section fixed right-[2rem] top-[4rem] rounded-xl w-[7rem] h-[5rem] flex items-center justify-center flex-col">
             <div class="english cursor-pointer w-full hover:bg-[#4c11bb] text-center py-1 rounded-xl ">
                 <h1>Anglais</h1>
             </div>
@@ -68,7 +68,7 @@
                 <h1>Francais</h1>
             </div>
     </section>
-    <section id="home" class="section-1 flex flex-col w-full bg-[#030711] items-center pt-[6rem] pb-8">
+    <section id="home" class="section-1 flex flex-col w-full  items-center pt-[6rem] pb-8">
         <article class="w-[90%] flex flex-col items-center mb-4 ">
             <div class="img w-50 rounded-full mb-[1rem] h-50 p-[2px] bg-gradient-to-r from-[#4c11bb] via-[#4c11bb] to-[#9A88F9]">
                 <img src="../assets/AKWANINE Didier.jpg" class="w-full h-full rounded-[inherit] object-cover " alt="Didier AKWANINE">
@@ -104,7 +104,7 @@
         <article class="flex-col lg:flex-row sm:flex gap-[4%] w-full">
             <section class="section-left w-full lg:w-[48%] ">
                  <h1 class="font-bold text-[1rem] sm:text-[1.5rem] mb-8 text-center">Experiences professionnelles</h1>
-                 <article class="flex bg-[#0F1629] rounded-xl gap-4 px-6 py-4 mb-8">
+                 <article class="flex rounded-xl gap-4 px-6 py-4 mb-8">
                     <div class="">
                         <i class="bi bi-braces text-[2rem] text-[#4712a8]"></i>
                     </div>
@@ -113,7 +113,7 @@
                         <p class="text-[1rem]">Conception de sites et applications modernes et responsives avec Django, Tailwind, JavaScript et le TALL Stack.</p>
                     </div>
                  </article>
-                 <article class="flex bg-[#0F1629] rounded-xl gap-4 px-4 py-6 mb-8">
+                 <article class="flex  rounded-xl gap-4 px-4 py-6 mb-8">
                     <div>
                         <i class="bi bi-cpu text-[2rem] text-[#4712a8]"></i>
                     </div>
@@ -122,7 +122,7 @@
                         <p class="text-[1rem]">Création d’applications performantes avec Python, Java et PHP, orientées vers l’automatisation et la cybersécurité.</p>
                     </div>
                  </article>
-                 <article class="flex bg-[#0F1629] rounded-xl gap-4 px-4 py-6 mb-8">
+                 <article class="flex  rounded-xl gap-4 px-4 py-6 mb-8">
                     <div>
                         <i class="bi bi-hdd-network text-[2rem] text-[#4712a8]"></i>
                     </div>
@@ -138,15 +138,15 @@
                         Mon objectif est de concevoir des applications performantes, sécurisées et accessibles, tout en intégrant une compréhension approfondie des systèmes et des réseaux.</p>
                 </article>
                 <article class="flex sm:gap-[2rem] gap-[1rem] w-full md:justify-center lg:justify-center">
-                    <div class="bg-[#0F1629] py-4 sm:px-4 px-1 flex flex-col rounded-xl justify-center items-center">
+                    <div class=" py-4 sm:px-4 px-1 flex flex-col rounded-xl justify-center items-center">
                         <h1 class="font-bold text-[1.6rem] text-[#4712a8]">100+</h1>
                         <p class="text-center">Contributions cette année</p>
                     </div>
-                    <div class="bg-[#0F1629] py-4 px-4 flex flex-col rounded-xl justify-center items-center">
+                    <div class=" py-4 px-4 flex flex-col rounded-xl justify-center items-center">
                         <h1 class="font-bold text-[1.6rem] text-[#4712a8]">22+</h1>
                         <p class="text-center">Repositories</p>
                     </div>
-                    <div class="bg-[#0F1629] py-4 px-4 flex flex-col rounded-xl justify-center items-center">
+                    <div class=" py-4 px-4 flex flex-col rounded-xl justify-center items-center">
                         <h1 class="font-bold text-[1.6rem] text-[#4712a8]">3+</h1>
                         <p class="text-center">Année d'expérience</p>
                     </div>
@@ -156,7 +156,7 @@
      </section>
 
     <!-- skills  -->
-     <section class="section-3 px-[1rem] sm:px-[2rem] bg-[#030711] py-8" id="skills">
+     <section class="section-3 px-[1rem]  sm:px-[2rem]  py-8" id="skills">
         <header class="flex items-center flex-col w-full mb-8">
             <h1 class="font-bold text-xl mb-2 bg-gradient-to-r from-[#4c11bb] via-[#4c11bb] to-[#9A88F9] bg-clip-text text-transparent">Compétences & Technologies</h1>
             <h2 class="font-bold text-[1rem]  mb-2sm:mb-4 text-center">Mes Expertises Techniques</h2>
@@ -344,8 +344,8 @@
             <article class="w-full flex md:flex-row  lg:gap-[2%] mg:gap-[2%]  gap-4 flex-wrap">
                 <section id="web-project" class="bg-[#080E1D]  w-full lg:w-[32%] mb-2 lg:mb-6 md:w-[48%] py-4 px-4 flex flex-col justify-between rounded-2xl">
                     <div class="w-full flex justify-between mb-4">
-                        <h1 class="font-bold text-xl text-white">STMIS</h1>
-                        <a href="">
+                        <h1 class="font-bold text-xl ">STMIS</h1>
+                        <a href="https://github.com/Dev-AKWANINE-Didier">
                             <i class="bi bi-github text-[#ffffff97]"></i>
                         </a>
                     </div>
@@ -353,37 +353,37 @@
                         <p>Favorisez échanges et le suivi académique au sein d'une université grâce à un système qui reproche enseignants et étudiants dans un environnement structuré et interactifs.</p>
                     </div>
                     <div class="w-full flex gap-4">
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>HTML</p>
                        </div>
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>TailwindCSS</p>
                        </div>
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>Django</p>
                        </div>
                     </div>
                 </section>
                 <section id="telecomm-project" class="bg-[#080E1D]  w-full lg:w-[32%] mb-2 lg:mb-6 md:w-[48%] py-4 px-4 flex flex-col justify-between rounded-2xl">
                     <div class="w-full flex justify-between mb-4">
-                        <h1 class="font-bold text-xl text-white ">Packet Sniffer (Analyseur de paquets)</h1>
+                        <h1 class="font-bold text-xl ">Packet Sniffer (Analyseur de paquets)</h1>
                     </div>
                     <div class="w-full mb-4">
                         <p>Capture et analyse le trafic réseau pour afficher les protocoles utilisés, les adresses IP, ports, etc.</p>
                     </div>
                     <div class="w-full flex gap-4">
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>Wireshark</p>
                        </div>
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>Scapy (Python)</p>
                        </div>
                     </div>
                 </section>
                 <section id="web-project" class="bg-[#080E1D]  w-full lg:w-[32%] mb-2 lg:mb-6 md:w-[48%] py-4 px-4 flex flex-col justify-between rounded-2xl">
                     <div class="w-full flex justify-between mb-4">
-                        <h1 class="font-bold text-xl text-white">Auth Laraval</h1>
-                        <a href="">
+                        <h1 class="font-bold text-xl ">Auth Laraval</h1>
+                        <a href="https://github.com/Dev-AKWANINE-Didier">
                             <i class="bi bi-github text-[#ffffff97]"></i>
                         </a>
                     </div>
@@ -391,37 +391,37 @@
                         <p>Système d'authentification personnalisé développé avec Laravel Fortify.</p>
                     </div>
                     <div class="w-full flex gap-4">
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>HTML</p>
                        </div>
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>TailwindCSS</p>
                        </div>
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>Laravel</p>
                        </div>
                     </div>
                 </section>
                 <section id="telecomm-project" class="bg-[#080E1D]  w-full lg:w-[32%] mb-2 lg:mb-6 md:w-[48%] py-4 px-4 flex flex-col justify-between rounded-2xl">
                     <div class="w-full flex justify-between mb-4">
-                        <h1 class="font-bold text-xl text-white">Chat Client-Serveur (TCP/IP)</h1>
+                        <h1 class="font-bold text-xl ">Chat Client-Serveur (TCP/IP)</h1>
                     </div>
                     <div class="w-full mb-4">
                         <p>Permet la communication instantanée entre plusieurs utilisateurs sur un réseau local via sockets.</p>
                     </div>
                     <div class="w-full flex gap-4">
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>Python</p>
                        </div>
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>TCP/IP sockets</p>
                        </div>
                     </div>
                 </section>
                 <section id="web-project" class="bg-[#080E1D]  w-full lg:w-[32%] mb-2 lg:mb-6 md:w-[48%] py-4 px-4 flex flex-col justify-between rounded-2xl">
                     <div class="w-full flex justify-between mb-4">
-                        <h1 class="font-bold text-xl text-white">StuFaPay</h1>
-                        <a href="">
+                        <h1 class="font-bold text-xl ">StuFaPay</h1>
+                        <a href="https://github.com/Dev-AKWANINE-Didier">
                             <i class="bi bi-github text-[#ffffff97]"></i>
                         </a>
                     </div>
@@ -429,26 +429,26 @@
                         <p>Favorisez la gestion des bordereaux et faire le paiement exprès de frais académiques d’une manière numérique en réduisant le cout de transport et résoudre le problème de gestion des bordereaux. </p>
                     </div>
                     <div class="w-full flex gap-4">
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>HTML</p>
                        </div>
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>TailwindCSS</p>
                        </div>
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>Django</p>
                        </div>
                     </div>
                 </section>
                 <section id="telecomm-project" class=" bg-[#080E1D]  w-full lg:w-[32%] mb-2 lg:mb-6 md:w-[48%] py-4 px-4 flex flex-col justify-between rounded-2xl">
                     <div class="w-full flex justify-between mb-4">
-                        <h1 class="font-bold text-xl text-white">Simulateur de réseau LAN</h1>
+                        <h1 class="font-bold text-xl ">Simulateur de réseau LAN</h1>
                     </div>
                     <div class="w-full mb-4">
                         <p>Conception d’un petit réseau (ordinateurs, routeurs, commutateurs) pour apprendre la communication IP.</p>
                     </div>
                     <div class="w-full flex gap-4">
-                       <div class="rounded-full text-white   px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
+                       <div class="rounded-full    px-3 flex justify-center items-center border-[1px] border-[#ffffff30]">
                         <p>Cisco Packet Tracer</p>
                        </div>
                     </div>
@@ -459,7 +459,7 @@
       </section>
 
       <!-- contanct  -->
-      <section class="section-5  bg-[#040814] px-[1rem] sm:px-[2rem]  py-12" id="contacts">
+      <section class="section-5  px-[1rem] sm:px-[2rem]  py-12" id="contacts">
            <header class="flex items-center flex-col w-full mb-12">
                 <h1 class="font-bold text-xl mb-2 bg-gradient-to-r from-[#4c11bb] via-[#4c11bb] to-[#9A88F9] bg-clip-text text-transparent">Contacts</h1>
                 <h2 class="font-bold text-[1rem]  mb-2sm:mb-4 text-center">Travaillons ensemble sur tes prochains projets</h2>
@@ -470,9 +470,9 @@
                     <section class=" w-full lg:w-[22.5%]  md:w-[45%] bg-[#080E1D] py-8 rounded-2xl  flex items-center justify-center">
                         <a href="https://github.com/Dev-AKWANINE-Didier" class="flex flex-col items-center gap-[0.5rem] hover:bg-[#4c11bb] px-4 py-2  rounded-[inherit]">
                             <div class="py-3 px-4 rounded-full bg-[#040814]">
-                                <i class="bi bi-github"></i>
+                                <i class="bi bi-github text-white"></i>
                             </div>
-                            <h1 class="font-bold text-white">GitHub</h1>
+                            <h1 class="font-bold ">GitHub</h1>
                             <p class="text-[0.8rem]">Dev-AKWANINE-Didier</p>
                         </a>
                     </section>
@@ -490,44 +490,44 @@
                             <div class="py-3 px-4 rounded-full bg-[#040814]">
                                 <i class="bi bi-whatsapp text-[#22C55E]"></i>
                             </div>
-                            <h1 class="font-bold text-white">Whatsapp</h1>
+                            <h1 class="font-bold ">Whatsapp</h1>
                             <p class="text-[0.8rem]">+257 77 112 862</p>
                         </a>
                     </section>
                     <section class="w-full lg:w-[22.5%]  md:w-[45%] bg-[#080E1D] py-8 rounded-2xl  flex items-center justify-center">
-                        <a href="" class="flex flex-col items-center gap-[0.5rem] hover:bg-[#4c11bb] px-4 py-2  rounded-[inherit]">
+                        <a href="https://www.linkedin.com/in/didier-akwanine/" class="flex flex-col items-center gap-[0.5rem] hover:bg-[#4c11bb] px-4 py-2  rounded-[inherit]">
                             <div class="py-3 px-4 rounded-full bg-[#040814]">
                                 <i class="bi bi-linkedin text-[#3B82F6]"></i>
                             </div>
-                            <h1 class="font-bold text-white">LinkedIn</h1>
+                            <h1 class="font-bold ">LinkedIn</h1>
                             <p class="text-[0.8rem]">AKWANINE Didier</p>
                         </a>
                     </section>
                     <section class="w-full lg:w-[22.5%]  md:w-[45%] bg-[#080E1D] py-8 rounded-2xl  flex items-center justify-center">
-                        <a href="" class="flex flex-col items-center gap-[0.5rem] hover:bg-[#4c11bb] px-4 py-2  rounded-[inherit]">
+                        <a href="https://x.com/IrAkwanine/" class="flex flex-col items-center gap-[0.5rem] hover:bg-[#4c11bb] px-4 py-2  rounded-[inherit]">
                             <div class="py-3 px-4 rounded-full bg-[#040814]">
                                 <i class="bi bi-twitter-x text-[#283D9E]"></i>
                             </div>
-                            <h1 class="font-bold text-white">X</h1>
+                            <h1 class="font-bold ">X</h1>
                             <p class="text-[0.8rem]">AKWANINE Didier</p>
                         </a>
                     </section>
                     <section class="w-full lg:w-[22.5%]  md:w-[45%] bg-[#080E1D] py-8 rounded-2xl  flex items-center justify-center">
-                        <a href="" class="flex flex-col items-center gap-[0.5rem] hover:bg-[#4c11bb] px-4 py-2  rounded-[inherit]">
+                        <a href="https://www.facebook.com/didier.kasende.adbb/" class="flex flex-col items-center gap-[0.5rem] hover:bg-[#4c11bb] px-4 py-2  rounded-[inherit]">
                             
                             <div class="py-3 px-4 rounded-full bg-[#040814]">
                                <i class="bi bi-facebook text-blue-600"></i>
                             </div>
-                            <h1 class="font-bold text-white">Facebook</h1>
+                            <h1 class="font-bold ">Facebook</h1>
                             <p class="text-[0.8rem]">AKWANINE Didier</p>
                         </a>
                     </section>
                     <section class="w-full lg:w-[22.5%]  md:w-[45%] bg-[#080E1D] py-8 rounded-2xl  flex items-center justify-center">
-                        <a href="" class="flex flex-col items-center gap-[0.5rem] hover:bg-[#4c11bb] px-4 py-2  rounded-[inherit]">
+                        <a href="https://www.instagram.com/akwanine_didier/" class="flex flex-col items-center gap-[0.5rem] hover:bg-[#4c11bb] px-4 py-2  rounded-[inherit]">
                             <div class="py-3 px-4 rounded-full bg-[#040814]">
                                <i class="bi bi-instagram text-[red]"></i>
                             </div>
-                            <h1 class="font-bold text-white">Instagram</h1>
+                            <h1 class="font-bold ">Instagram</h1>
                             <p class="text-[0.8rem]">AKWANINE Didier</p>
                         </a>
                     </section>
@@ -536,14 +536,14 @@
                             <div class="py-3 px-4 rounded-full bg-[#040814]">
                                <i class="bi bi-globe text-[#22C55E]"></i>
                             </div>
-                            <h1 class="font-bold text-white">Website</h1>
+                            <h1 class="font-bold">Website</h1>
                             <p class="text-[0.8rem]">www.didierakwanine.com</p>
                         </a>
                     </section>
                 </article>
                 <article class=" location w-full md:w-[60%] bg-[#080E1D] py-8 rounded-2xl  flex items-center flex-col justify-center gap-[0.5rem]">
                         <i class="bi bi-geo-alt text-[2rem] text-[#8E4CFF]"></i>
-                        <h1 class="font-bold text-white">Localisation</h1>
+                        <h1 class="font-bold ">Localisation</h1>
                         <h2>Bukavu, RD Congo</h2>
                 </article>
             </section>
@@ -565,6 +565,6 @@
            </section>
            <section></section>
        </footer>
-    <script src="../static//js/index.js"></script>
+    <script src="../static/js/index.js"></script>
 </body>
 </html>

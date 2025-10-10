@@ -5,10 +5,19 @@
 /* Mobile-first : styles par défaut */
 
 /* Barre de défilement personnalisée */
+html{
+  scroll-behavior: smooth; /* pour un défilement fluide */
+}
 body{
   font-family: 'Jost',sans-serif;
+  background: #030711;
   color: rgba(241, 236, 236, 0.888);
-}     
+  transition: background 0.4s, color 0.4s;
+}  
+body.white-mode {
+  background-color: white;
+  color: black;
+}   
 body::-webkit-scrollbar{
     width: 0.4rem;
 }
@@ -22,12 +31,25 @@ body::-webkit-scrollbar-thumb{
 }
 #navbar{
   border-bottom: 1px solid rgba(255, 255, 255, 0.064);
+  transition: background 0.4s, color 0.4s;
 }
+.white-mode #navbar{
+  border-bottom: 1px solid rgba(23, 21, 21, 0.064);
+  color: black;
+}
+
+
 #navbar .links li a{
    transition: background 0.3s;
 }
+
 #navbar .mode ,#navbar .translate ,#navbar .toggle-btn{
     transition: background 0.3s;
+}
+
+#navbar .theme-icon-hidden{
+  display: none;
+  transition: display 0.3s ;
 }
 
 #navbar .links{
@@ -38,7 +60,25 @@ body::-webkit-scrollbar-thumb{
   gap: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.064);
   background-color: #030711e7;
+  transition: display 0.4s, color 0.4s;
+}
+.white-mode #navbar .links{
+  color: white;
+}
 
+#navbar .links.showLinks{
+  display: flex;
+}
+.toggle-btn-icon{
+  display: none;
+}
+.section-1{
+  background-color: #030711;
+  transition: background 0.4s, color 0.4s ;
+}
+.white-mode .section-1{
+  background-color: rgba(255, 255, 255, 0);
+  /* color: black; */
 }
 .section-4 .btns article .all{
 box-shadow: 0px 0px 10px  #4712a8;
@@ -49,6 +89,14 @@ box-shadow: 0px 0px 10px  #4712a8;
 
 .translate-section{
   border: 1px solid rgba(255, 255, 255, 0.064);
+  transition: display 0.4s;
+  display: none;
+}
+.translate-section.showTranslateSection{
+  display: flex;
+}
+.white-mode .translate-section{
+  border: 1px solid rgba(23, 21, 21, 0.064);
 }
 .translate-section div{
   transition: background 0.3s;
@@ -58,8 +106,14 @@ box-shadow: 0px 0px 10px  #4712a8;
 }
 
 #about article section.section-left article{
-  transition: box-shadow .3s ease;
+  transition: box-shadow .4s , background 0.4s, color 0.4s, border 0.4s ;
   border: 1px solid rgba(255, 255, 255, 0.064);
+  background-color: #0F1629;
+}
+.white-mode #about article section.section-left article{
+  background-color: white;
+  color: black;
+  border: 1px solid rgba(27, 23, 23, 0.148);
 }
 #about article section.section-left article:hover{
   box-shadow: 0px 0px 10px  #4712a8;
@@ -68,7 +122,22 @@ box-shadow: 0px 0px 10px  #4712a8;
 
 #about article section.section-right article div{
   transition: box-shadow .3s ease;
+  background-color: #0F1629;
   border: 1px solid rgba(255, 255, 255, 0.064);
+}
+.white-mode #about article section.section-right article div{
+  background-color: white;
+  color: black;
+  border: 1px solid rgba(27, 23, 23, 0.148);
+}
+
+
+.section-3 {
+  background-color: #040814;
+  transition: background 0.4s,color 0.4s;
+}
+.white-mode .section-3 {
+  background: transparent;
 }
 .section-3 .main-section{
   transition: transform 0.3s ease,opacity 0.3s ease;
@@ -82,13 +151,35 @@ box-shadow: 0px 0px 10px  #4712a8;
 .section-4 .project article section{
   border: 1px solid rgba(255, 255, 255, 0.064);
   transition: transform 0.3s ease;
+  transition: background 0.4s, color 0.4s, border 0.4s ;
+}
+.white-mode .section-4 .project article section{
+  background-color: white;
+  color: black;
+  border: 1px solid rgba(27, 23, 23, 0.148);
 }
 .section-4 .project article section:hover{
   transform: translateY(-2px) scale(1.02);
 }
+
+.section-5 {
+  background-color: #040814;
+  transition: background 0.4s, color 0.4s;
+}
+.white-mode .section-5{
+  background-color: transparent;
+}
 .section-5 section article section{
+  color: white;
   border: 1px solid rgba(255, 255, 255, 0.064);
   transition: transform 0.3s ease,box-shodow 0.3s ease;
+
+}
+.white-mode .section-5 section article section{
+  background-color: white;
+  color: black;
+  border: 1px solid rgba(27, 23, 23, 0.148);
+
 }
 
 .section-5 section article section:hover{
@@ -101,6 +192,12 @@ box-shadow: 0px 0px 10px  #4712a8;
 
 .location {
   border: 1px solid rgba(255, 255, 255, 0.064);
+  transition: background 0.4s, color 0.4s, border 0.4s ;
+}
+.white-mode .location{
+  background-color: white;
+  color: black;
+  border: 1px solid rgba(27, 23, 23, 0.148);
 }
 
 footer section article p {
@@ -110,6 +207,15 @@ footer section article p {
 }
 footer section:nth-child(1){
   border-bottom: 1px solid rgba(255, 255, 255, 0.064);
+}
+.white-mode footer section:nth-child(1){
+  border-bottom: 1px solid rgba(14, 12, 12, 0.646);
+}
+ footer p, footer h2{
+  transition: color 0.4s;
+ }
+.white-mode footer p, .white-mode footer h2{
+  color: black;
 }
 
 /* sm (≥640px) */
@@ -122,6 +228,7 @@ footer section:nth-child(1){
     top: 0;
     width: 100%;
     flex-direction: row;
+    background-color: transparent; 
     height: 100%;
     border: none;
   }
@@ -141,9 +248,6 @@ footer section:nth-child(1){
   }
   .section-2 header h2{
     font-size: 1.5rem;
-  }
-  .section-3 {
-    background-color: #040814;
   }
   .section-3 header h1{
     font-size: 2.5rem;
@@ -169,6 +273,9 @@ footer section:nth-child(1){
   .section-5 header h2{
     font-size: 1.5rem;
   }
+  .white-mode #navbar .links{
+  color: black;
+}
   
 
   /* .section-2 .section-left{
@@ -198,6 +305,7 @@ footer section:nth-child(1){
   #navbar .toggle-btn{
     display: none;
   }
+
 }
 
 /* lg (≥1024px) */
