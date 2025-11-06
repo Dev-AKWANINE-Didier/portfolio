@@ -53,3 +53,42 @@ translate.addEventListener("click", () => {
 })
 
 
+
+const allBtn = document.getElementById('all-project');
+const webBtn = document.getElementById('web-app');
+const telecomBtn = document.getElementById('telecomm-tool');
+
+const allProjects = document.querySelectorAll('.project');
+const webProjects = document.querySelectorAll('.web-project');
+const telecomProjects = document.querySelectorAll('.telecom-project');
+
+function showProjects(category) {
+    allProjects.forEach(p => p.style.display = 'none'); // cacher tout
+
+    switch(category) {
+        case 'all':
+            allProjects.forEach(p => p.style.display = 'block');
+            break;
+        case 'web':
+            webProjects.forEach(p => p.style.display = 'block');
+            break;
+        case 'telecom':
+            telecomProjects.forEach(p => p.style.display = 'block');
+            break;
+    }
+}
+
+// Événements clic
+allBtn.addEventListener('click', () => showProjects('all'));
+webBtn.addEventListener('click', () => showProjects('web'));
+telecomBtn.addEventListener('click', () => showProjects('telecom'));
+
+// Affichage par défaut
+showProjects('all');
+
+
+
+
+
+
+
