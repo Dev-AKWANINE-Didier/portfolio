@@ -30,27 +30,60 @@ const themeToggle = document.getElementById("theme-toggle");
 
 
 
-
-const toggleBtn = document.getElementById("toggle-btn");
-const navbarLinks = document.getElementById("navbarlinks")
-
-const biList = toggleBtn.getElementsByClassName("bi-list")[0];
-const bixLg = toggleBtn.getElementsByClassName("bi bi-x-lg")[0];
-
-toggleBtn.addEventListener("click", () => {
-    navbarLinks.classList.toggle("showLinks");
-    biList.classList.toggle('toggle-btn-icon')
-    bixLg.classList.toggle('toggle-btn-icon')
-})
-
-
-
-const translate = document.getElementById('translate')
-const translateSection = document.getElementById('translate-section')
-
-translate.addEventListener("click", () => {
-   translateSection.classList.toggle("showTranslateSection");
-})
+    const toggleBtn = document.getElementById("toggle-btn");
+    const navbarLinks = document.getElementById("navbarlinks");
+    const biList = toggleBtn.querySelector(".bi-list");
+    const bixLg = toggleBtn.querySelector(".bi-x-lg");
+    
+    // Fonction unique pour ouvrir/fermer et changer l'icône
+    function toggleMenu() {
+        const isOpen = navbarLinks.classList.toggle("showLinks");
+        
+        // On gère les icônes en fonction de si le menu est ouvert ou non
+        biList.classList.toggle('toggle-btn-icon', isOpen);
+        bixLg.classList.toggle('toggle-btn-icon', !isOpen);
+    }
+    
+    // 1. Clic sur le bouton Toggle
+    toggleBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // Empêche le clic de se propager à la fenêtre (window)
+        toggleMenu();
+    });
+    
+    // 2. Clic n'importe où sur la page
+    window.addEventListener("click", (e) => {
+        // Si le menu est ouvert ET que le clic n'est PAS sur le menu ou le bouton
+        if (navbarLinks.classList.contains("showLinks") && 
+            !navbarLinks.contains(e.target) && 
+            !toggleBtn.contains(e.target)) {
+            
+            toggleMenu(); 
+        }
+    });
+    
+    
+    
+    
+    const translate = document.getElementById('translate');
+    const translateSection = document.getElementById('translate-section');
+    
+    // 1. Gestion du bouton Toggle
+    translate.addEventListener("click", (e) => {
+       // Empêche le clic de remonter jusqu'à window immédiatement
+       e.stopPropagation(); 
+       translateSection.classList.toggle("showTranslateSection");
+    });
+    
+    // 2. Détection du clic en dehors de la section
+    window.addEventListener("click", (e) => {
+       // On vérifie si la section est affichée ET si le clic est en dehors de la section
+       if (translateSection.classList.contains("showTranslateSection") && 
+           !translateSection.contains(e.target)) {
+           
+           translateSection.classList.remove("showTranslateSection");
+       }
+    });
+    
 
 
 

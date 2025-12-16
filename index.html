@@ -19,6 +19,9 @@
     <!-- icons links  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+    <!-- AOS annimation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
     <!-- font awesome icons -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -29,6 +32,26 @@
     <!-- italionno  -->
     <link href="https://fonts.googleapis.com/css2?family=Italianno,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <style>
+
+    .floating {
+      animation: floating 2s infinite alternate ease-in-out;
+    }
+    
+    @keyframes floating {
+      from { transform: translateY(0); }
+      to { transform: translateY(-5px); }
+    }
+     
+    .floating-reverse {
+        animation: floating-reverse 2s infinite alternate ease-in-out;
+    }
+    @keyframes floating-reverse {
+      from { transform: translateY(0); }
+      to { transform: translateY(5px); }
+    }
+    
+    </style>
 </head>
 <body class=" ">
     <nav id="navbar" class="fixed min-h-[4rem] px-[1rem]  items-center border-gray-500  text-white flex justify-between top-0 w-full z-50 border-b border-border backdrop-blur-xl ">
@@ -61,16 +84,16 @@
         </section>
     </nav>
     <section id="translate-section" class="translate-section fixed right-[2rem] top-[4rem] rounded-xl w-[7rem] h-[5rem] flex items-center justify-center flex-col">
-            <div class="english cursor-pointer w-full hover:bg-[#4c11bb] text-center py-1 rounded-xl ">
-                <h1>Anglais</h1>
-            </div>
-            <div class="french w-full cursor-pointer hover:bg-[#4c11bb] text-center py-1 rounded-xl ">
-                <h1>Francais</h1>
-            </div>
+        <div class="english cursor-pointer w-full hover:bg-[#4c11bb] text-center py-1 rounded-xl">
+            <h1>Anglais</h1>
+        </div>
+        <div class="french cursor-pointer w-full hover:bg-[#4c11bb] text-center py-1 rounded-xl">
+            <h1>Français</h1>
+        </div>
     </section>
     <section id="home" class="section-1 flex flex-col w-full  items-center pt-[6rem] pb-8">
         <article class="w-[90%] flex flex-col items-center mb-4 ">
-            <div class="img w-50 rounded-full mb-[1rem] h-50 p-[2px] bg-gradient-to-r from-[#4c11bb] via-[#4c11bb] to-[#9A88F9]">
+            <div data-aos="zoom-in"  class="floating img w-50 rounded-full mb-[1rem] h-50 p-[2px] bg-gradient-to-r from-[#4c11bb] via-[#4c11bb] to-[#9A88F9]">
                 <img src="assets/didier.jpg" class="w-full h-full rounded-[inherit] object-cover " alt="Didier AKWANINE">
             </div>
             <h1 class="text-xl text-center mb-4">Bonjour ! 👋</h1>
@@ -104,13 +127,13 @@
         <article class="flex-col lg:flex-row sm:flex gap-[4%] w-full">
             <section class="section-left w-full lg:w-[48%] ">
                  <h1 class="font-bold text-[1rem] sm:text-[1.5rem] mb-8 text-center">Experiences professionnelles</h1>
-                 <article class="flex rounded-xl gap-4 px-6 py-4 mb-8">
+                 <article class="flex rounded-xl gap-4 px-6 py-4 mb-8 ">
                     <div class="">
                         <i class="bi bi-braces text-[2rem] text-[#4712a8]"></i>
                     </div>
                     <div>
                         <h1 class="font-bold text-[1rem] sm:text-[1.2rem] mb-2">Web developer</h1>
-                        <p class="text-[1rem]">Conception de sites et applications modernes et responsives avec Django, Tailwind, JavaScript et le TALL Stack.</p>
+                        <p class="text-[1rem]">Concevez des expériences web modernes et ultra-réactives grâce à l'expertise Django, Tailwind et JavaScript, sublimées par la puissance de la stack TALL.</p>
                     </div>
                  </article>
                  <article class="flex  rounded-xl gap-4 px-4 py-6 mb-8">
@@ -162,9 +185,9 @@
             <h2 class="font-bold text-[1rem]  mb-2sm:mb-4 text-center">Mes Expertises Techniques</h2>
         </header>
         <section class="main flex-col lg:flex lg:flex-row justify-center lg:flex-wrap w-full pb-8 gap-[3%]">
-            <article class="w-full lg:w-[22.5%] ">
+            <article class="w-full lg:w-[22.5%] floating">
                 <section class="w-full mb-8 flex flex-col items-center justify-center">
-                    <h1 class="font-bold text-[1.6rem] text-[#4712a8]">5+</h1>
+                    <h1 class="font-bold text-[1.6rem] text-[#4712a8]">4+</h1>
                     <h2 class="text-[rem]">FRONT-END</h2>
                 </section>
                 <section class=" main-section bg-gradient-to-r rounded-2xl from-[#184EB9] via-[#356ab1] to-[#1d6b94] border-[#ffffffa4] border-1 w-full py-6 flex flex-col items-center">
@@ -192,9 +215,9 @@
                     </article>
                 </section>
             </article>
-            <article class="w-full lg:w-[22.5%] ">
+            <article class="w-full lg:w-[22.5%] floating-reverse">
                 <section class="w-full mb-8 flex flex-col items-center justify-center">
-                    <h1 class="font-bold text-[1.6rem] text-[#4712a8]">4+</h1>
+                    <h1 class="font-bold text-[1.6rem] text-[#4712a8]">5+</h1>
                     <h2 class="text-[rem]">BACK-END</h2>
                 </section>
                 <section class="main-section bg-gradient-to-r rounded-2xl from-[#12773C] via-[#147445] to-[#076543] border-[#ffffffa4] border-1 w-full py-6 flex flex-col items-center">
@@ -225,7 +248,7 @@
                     </article>
                 </section>
             </article>
-            <article class="w-full lg:w-[22.5%]">
+            <article class="w-full lg:w-[22.5%] floating">
                 <section class="w-full mb-8 flex flex-col items-center justify-center">
                     <h1 class="font-bold text-[1.6rem] text-[#4712a8]">4+</h1>
                     <h2 class="text-[rem]">BASE DES DONNEES</h2>
@@ -255,7 +278,7 @@
                     </article>
                 </section>
             </article>
-            <article class="w-full lg:w-[22.5%] ">
+            <article class="w-full lg:w-[22.5%] floating-reverse">
                 <section class="w-full mb-8 flex flex-col items-center justify-center">
                     <h1 class="font-bold text-[1.6rem] text-[#4712a8]">4+</h1>
                     <h2 class="text-[rem]">DEVOPS</h2>
@@ -285,10 +308,10 @@
                     </article>
                 </section>
             </article>
-            <article class="w-full  lg:w-[25%] ">
+            <article class="w-full  lg:w-[25%] floating-reverse">
                 <section class="w-full mb-8 flex flex-col items-center justify-center">
                     <h1 class="font-bold text-[1.6rem] text-[#4712a8]">4+</h1>
-                    <h2 class="text-[rem]">RESEAUX</h2>
+                    <h2 class="text-[rem]">RÉSEAUX</h2>
                 </section>
                 <section class=" main-section bg-gradient-to-r rounded-2xl from-[#184EB9] via-[#356ab1] to-[#1d6b94] border-[#ffffffa4] border-1 w-full py-6 flex flex-col items-center">
                     <article class="bg-[#ffffff4d] py-2 px-3 mb-3 rounded-full border-[#ffffffa4] border-1">
@@ -311,6 +334,39 @@
                     <article>
                         <div class="bg-[#ffffff4d] py-1 px-3 mb-3 rounded-xl border-[#ffffffa4] border-1">
                             <p class="text-[0.9rem]">Protocoles</p>
+                        </div>
+                    </article>
+                </section>
+            </article>
+            <article class="w-full lg:w-[22.5%] floating">
+                <section class="w-full mb-8 flex flex-col items-center justify-center">
+                    <h1 class="font-bold text-[1.6rem] text-[#4712a8]">5+</h1>
+                    <h2 class="text-[rem]">DONNÉES</h2>
+                </section>
+                <section class="main-section bg-gradient-to-r rounded-2xl from-[#12773C] via-[#147445] to-[#076543] border-[#ffffffa4] border-1 w-full py-6 flex flex-col items-center">
+                    <article class="bg-[#ffffff4d] py-2 px-3 mb-3 rounded-full border-[#ffffffa4] border-1">
+                        <h1 class="text-[2rem]">📊</h1>
+                    </article>
+                    <article class="mb-4">
+                        <h1 class="font-bold text-[1.5rem]">Analyse de données </h1>
+                    </article>
+                    <article class="flex gap-2">
+                        <div class="bg-[#ffffff4d] py-1 px-3 mb-3 rounded-xl border-[#ffffffa4] border-1">
+                            <p class="text-[0.9rem]">Numpy</p>
+                        </div>
+                        <div class="bg-[#ffffff4d] py-1 px-3 mb-3 rounded-xl border-[#ffffffa4] border-1">
+                            <p class="text-[0.9rem]">Pandas</p>
+                        </div>
+                        <div class="bg-[#ffffff4d] py-1 px-3 mb-3 rounded-xl border-[#ffffffa4] border-1">
+                            <p class="text-[0.9rem]">Matplotlib</p>
+                        </div>
+                    </article>
+                    <article class="flex gap-2">
+                        <div class="bg-[#ffffff4d] py-1 px-3 mb-3 rounded-xl border-[#ffffffa4] border-1">
+                            <p class="text-[0.9rem]">Seaborn</p>
+                        </div>
+                        <div class="bg-[#ffffff4d] py-1 px-3 mb-3 rounded-xl border-[#ffffffa4] border-1">
+                            <p class="text-[0.9rem]">JupyterLab</p>
                         </div>
                     </article>
                 </section>
@@ -346,7 +402,7 @@
                     <div class="w-full flex justify-between mb-4">
                         <h1 class="font-bold text-xl ">STMIS</h1>
                         <a href="https://github.com/Dev-AKWANINE-Didier">
-                            <i class="bi bi-github text-[#ffffff97]"></i>
+                            <i class="bi bi-github"></i>
                         </a>
                     </div>
                     <div class="w-full mb-4">
@@ -384,7 +440,7 @@
                     <div class="w-full flex justify-between mb-4">
                         <h1 class="font-bold text-xl ">Auth Laraval</h1>
                         <a href="https://github.com/Dev-AKWANINE-Didier">
-                            <i class="bi bi-github text-[#ffffff97]"></i>
+                            <i class="bi bi-github "></i>
                         </a>
                     </div>
                     <div class="w-full mb-4">
@@ -422,7 +478,7 @@
                     <div class="w-full flex justify-between mb-4">
                         <h1 class="font-bold text-xl ">StuFaPay</h1>
                         <a href="https://github.com/Dev-AKWANINE-Didier">
-                            <i class="bi bi-github text-[#ffffff97]"></i>
+                            <i class="bi bi-github "></i>
                         </a>
                     </div>
                     <div class="w-full mb-4">
@@ -566,5 +622,11 @@
            <section></section>
        </footer>
     <script src="../static/js/index.js"></script>
+
+    <!-- AOS annimation  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
